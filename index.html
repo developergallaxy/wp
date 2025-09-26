@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dev Online Book — Chat on WhatsApp</title>
+  <style>
+    :root{
+      --bg: linear-gradient(180deg,#ffffff,#f7fbf8);
+      --whatsapp:#25D366;
+      --max-width:420px;
+      --card-radius:16px;
+      --shadow: 0 8px 30px rgba(16,24,40,0.08);
+      --text:#0f172a;
+    }
+
+    html,body{
+      height:100%;
+      margin:0;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      color:var(--text);
+      background:var(--bg);
+    }
+
+    .wrap{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:24px;
+    }
+
+    .card{
+      width:100%;
+      max-width:var(--max-width);
+      background:transparent;
+      text-align:center;
+      border-radius:var(--card-radius);
+      padding:34px 22px;
+      box-shadow:var(--shadow);
+    }
+
+    .logo{
+      width:120px;
+      height:120px;
+      margin:0 auto 18px;
+      display:block;
+      border-radius:999px;
+      overflow:hidden;
+      box-shadow:0 6px 20px rgba(2,6,23,0.06);
+      background:white;
+    }
+
+    .logo img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    h1{
+      font-size:20px;
+      margin:0 0 18px;
+      font-weight:600;
+    }
+
+    p.lead{
+      margin:0 0 22px;
+      color:#334155;
+      font-size:14px;
+      line-height:1.4;
+    }
+
+    .cta{
+      display:inline-block;
+      text-decoration:none;
+      padding:14px 20px;
+      border-radius:12px;
+      font-weight:600;
+      font-size:16px;
+      background:var(--whatsapp);
+      color:white;
+      box-shadow:0 6px 18px rgba(37,211,102,0.18);
+      transition:transform .12s ease, box-shadow .12s ease, opacity .12s ease;
+    }
+
+    .cta:active{ transform:translateY(1px); }
+    .cta:hover{ box-shadow:0 10px 28px rgba(37,211,102,0.22); opacity:0.98 }
+
+    .small-note{
+      margin-top:16px;
+      font-size:12px;
+      color:#64748b;
+    }
+
+    @media (max-width:420px){
+      .logo{ width:100px; height:100px }
+      h1{ font-size:18px }
+      .cta{ width:100%; padding:14px }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <main class="card" role="main" aria-labelledby="page-title">
+      <a href="https://wa.me/message/H5UVUUU7WYK7N1" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+        <span class="logo" aria-hidden="true">
+          <!-- Place logo.jpg in same folder as this HTML file -->
+          <img src="logo.jpg" alt="Dev Online Book logo"/>
+        </span>
+      </a>
+
+      <h1 id="page-title">Dev Online Book</h1>
+      <p class="lead">Quick access to support and booking. Tap the button below to start a WhatsApp chat.</p>
+
+      <a class="cta" href="https://wa.me/message/H5UVUUU7WYK7N1" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a>
+
+      <div class="small-note">By clicking you will be redirected to WhatsApp.</div>
+    </main>
+  </div>
+</body>
+</html>
